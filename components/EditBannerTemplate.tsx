@@ -11,7 +11,6 @@ const predefinedImages = [
   "https://images.unsplash.com/photo-1533567767427-38bb7cbc0409?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHl0aG9ufGVufDB8MXwwfHx8MA%3D%3D",
   "https://images.unsplash.com/photo-1613779814142-d88c07f61aaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZyb2d8ZW58MHwxfDB8fHww",
   "https://images.unsplash.com/photo-1597164507717-c46f576fe1d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9sYXIlMjBiZWFyfGVufDB8MXwwfHx8MA%3D%3D",
-  "https://images.unsplash.com/photo-1475874619827-b5f0310b6e6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVuZ3VpbnxlbnwwfDF8MHx8fDA%3D",
 ];
 
 interface EditBannerTemplateProps {
