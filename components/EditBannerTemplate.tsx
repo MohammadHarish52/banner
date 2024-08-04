@@ -1,14 +1,17 @@
 import { useState } from "react";
-import { BiEdit, BiUpload } from "react-icons/bi";
+import { BiUpload } from "react-icons/bi";
 import { MdEdit } from "react-icons/md";
 
 // Example image URLs
 const predefinedImages = [
-  "/images/banner1.jpg",
-  "/images/banner2.jpg",
-  "/images/banner3.jpg",
-  "/images/banner4.jpg",
-  "/images/banner5.jpg",
+  "https://images.unsplash.com/photo-1490718720478-364a07a997cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyZHxlbnwwfDF8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1470619549108-b85c56fe5be8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmlyZHxlbnwwfDF8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1511823794984-b87716139b88?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmlyZHxlbnwwfDF8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1511216113906-8f57bb83e776?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGlvbnxlbnwwfDF8MHx8fDA%3D",
+  "https://images.unsplash.com/photo-1533567767427-38bb7cbc0409?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHl0aG9ufGVufDB8MXwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1613779814142-d88c07f61aaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZyb2d8ZW58MHwxfDB8fHww",
+  "https://images.unsplash.com/photo-1597164507717-c46f576fe1d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9sYXIlMjBiZWFyfGVufDB8MXwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1475874619827-b5f0310b6e6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVuZ3VpbnxlbnwwfDF8MHx8fDA%3D",
 ];
 
 interface EditBannerTemplateProps {
@@ -86,9 +89,9 @@ const EditBannerTemplate: React.FC<EditBannerTemplateProps> = ({
 
           <div className="flex-shrink-0">
             <img
-              src={image}
+              src={newImage}
               alt=""
-              className="w-24 h-48   object-cover border-2 border-gray-300 shadow-lg "
+              className="w-24 h-48 object-cover border-2 border-gray-300 shadow-lg"
             />
           </div>
         </div>
@@ -150,18 +153,28 @@ const EditBannerTemplate: React.FC<EditBannerTemplateProps> = ({
           </div>
         </div>
 
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Background Image URL
+        </label>
+        <input
+          type="text"
+          value={newBackground}
+          onChange={(e) => setNewBackground(e.target.value)}
+          className="w-full p-2 border border-gray-300 rounded mb-4"
+        />
+
         <div className="flex justify-end space-x-4">
           <button
-            onClick={handleSave}
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            onClick={onClose}
+            className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400 transition"
           >
-            Save
+            Cancel
           </button>
           <button
-            onClick={onClose}
-            className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400"
+            onClick={handleSave}
+            className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700 transition"
           >
-            Close
+            Save
           </button>
         </div>
       </div>
