@@ -125,7 +125,7 @@ const EditBannerTemplate: React.FC<EditBannerTemplateProps> = ({
         />
 
         {/* Image selection section */}
-        <div className="mb-4">
+        <div className="mb-4 overflow-x-auto">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Select Image
           </label>
