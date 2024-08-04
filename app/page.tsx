@@ -11,7 +11,6 @@ interface Adbanner {
   cta: string;
   image: string;
   background: string;
-  color: string;
 }
 
 export default function Home() {
@@ -53,10 +52,7 @@ export default function Home() {
       </h1>
       <div className="flex flex-wrap ">
         {banners.map((banner) => (
-          <div
-            key={banner.id}
-            className="w-full md:w-1/2 xl:w-1/3 px-4 mb-8  "
-          >
+          <div key={banner.id} className="w-full md:w-1/2 xl:w-1/3 px-4 mb-8  ">
             <BannerImageComp
               title={banner.title}
               description={banner.description}
