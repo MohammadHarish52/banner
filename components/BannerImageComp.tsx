@@ -34,7 +34,7 @@ const BannerImageComp = ({
         <p className="text-xs md:text-lg text-white bg-black bg-opacity-75 py-1 px-3 mb-3 rounded-lg">
           {description}
         </p>
-        <button className="bg-white text-xs md:text-base text-black font-semibold px-4 py-2 rounded hover:bg-gray-700 transition">
+        <button className="bg-white text-xs md:text-base text-black font-semibold px-4 py-2 rounded hover:bg-gray-200 transition">
           {cta}
         </button>
       </div>
