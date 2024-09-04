@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto p-4 grid-cols-1 d:grid-cols-2 lg:grid-cols-3 gap-4 bg-slate-900">
-      <h1 className=" text-2xl md:text-4xl mb-4 text-white font-bold text-center">
+      <h1 className=" text-2xl md:text-4xl mb-4 text-white font-bold text-center head">
         BANNER ASSIGMENT
       </h1>
       <div className="flex flex-wrap ">
